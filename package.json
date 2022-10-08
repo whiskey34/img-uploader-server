@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.cjs",
-    "dev": "nodemon server.cjs"
+    "dev": "nodemon server.cjs",
+    "postinstall": "ng build"
   },
   "keywords": [],
   "author": "whiskey34",
@@ -22,7 +23,8 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.1",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "postinstall": "^0.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
