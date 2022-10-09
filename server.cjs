@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-// const serveStatic = require('serve-static');
+const serveStatic = require('serve-static');
 const helmet = require('helmet');
 const path = require('path');
 
