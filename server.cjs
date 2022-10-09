@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(helmet());
-app.use('/static', express.static(path.join(__dirname + '/app/dist')));
+app.use('/static', express.static(path.join(__dirname + '/dist')));
 app.use(cors());
 // app.use(serveStatic(__dirname + '/app/dist'));
 
