@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 // const serveStatic = require('serve-static');
 const helmet = require('helmet');
+const path = require('path');
 
 dotenv.config();
 
@@ -11,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(helmet());
-app.use('/static', express.static(path.join(`${__dirname}/app/dist`)));
+app.use('/static', express.static(path.join(__dirname + '/app/dist')));
 app.use(cors());
 // app.use(serveStatic(__dirname + '/app/dist'));
 
