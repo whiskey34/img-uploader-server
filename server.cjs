@@ -2,16 +2,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const serveStatic = require('serve-static');
+// const serveStatic = require('serve-static');
+const helmet = require('helmet');
 
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(helmet());
+app.use('/static', express.static(path.join(`${__dirname}/app/dist`)));
 app.use(cors());
-app.use(serveStatic(__dirname + '/dist'));
+// app.use(serveStatic(__dirname + '/app/dist'));
 
 mongoose
   .connect(process.env.CONN_URL, {
