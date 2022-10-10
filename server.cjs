@@ -27,7 +27,7 @@ mongoose
   .then(() => console.log("mongoDB is connected"))
   .catch((err) => console.log(err));
 
-app.use("/upload", require("./routes/upload.cjs"));
+app.use("/upload", require(path.join (__dirname,"../routes/upload.cjs")));
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server Running On localhost:${port}`));
