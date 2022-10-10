@@ -7,12 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.cjs",
-    "server": "nodemon server.cjs",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "client-install": "npm install --prefix client",
-    "client": "npm start --prefix client",
-    "build": "webpack",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "dev": "nodemon server.cjs"
     
   },
   "keywords": [],
