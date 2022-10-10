@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const path = require('path')
-const cloudinary = require(path.join(__dirname, "../utils/cloudinary.cjs"));
-const upload = require(path.join(__dirname, "../utils/multer.cjs"));
-const Upload = require(path.join(__dirname, "../model/upload.cjs"));
+const cloudinary = require(path.join(__dirname, "./utils/cloudinary.cjs"));
+const upload = require(path.join(__dirname, "./utils/multer.cjs"));
+const Upload = require(path.join(__dirname, "./model/upload.cjs"));
 
 router.post("/", upload.single("file"), async (req, res) => {
   try {
