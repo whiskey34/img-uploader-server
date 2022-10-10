@@ -1,8 +1,8 @@
 .DS_Store
-app/
+app
 
 # Dependencies_
-node_modules/
+node_modules
 
 # package
 package-lock.json
