@@ -13,7 +13,15 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static('/dist'));
-app.use(helmet());
+app.use(helmet({ crossOriginEmbedderPolicy: false, originAgentCluster: true }));
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data: blob:"],
+    },
+  })
+);
 app.use(cors());
 app.use(serveStatic(__dirname + '/dist'));
 
